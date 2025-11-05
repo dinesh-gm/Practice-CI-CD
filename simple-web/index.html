@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Simple CI/CD Web App</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz App</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Welcome to CI/CD Demo</h2>
-    <button onclick="showMessage()">Click Me</button>
-    <p id="msg"></p>
-
-    <script src="script.js"></script>
+<div class="container">
+    <h1>Quiz App</h1>
+    <div id="quiz">
+        <h2 id="question">Question text</h2>
+        <div id="choices"></div>
+        <button id="nextBtn">Next</button>
+    </div>
+    <div id="result" class="hidden">
+        <h2>Your Score: <span id="score"></span></h2>
+        <button id="restartBtn">Restart Quiz</button>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
