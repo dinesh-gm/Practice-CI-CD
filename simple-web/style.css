@@ -1,58 +1,106 @@
+/* Base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: #f0f4f8;
-    height: 100vh;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    min-height: 100vh;
     margin: 0;
     padding-top: 50px;
+    color: #333;
 }
 
+/* Container */
 .container {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 40px 30px;
+    border-radius: 20px;
     width: 100%;
     max-width: 500px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     text-align: center;
+    animation: fadeIn 1s ease;
 }
 
+/* Headings */
+h1 {
+    font-weight: 600;
+    color: #ff416c;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Buttons */
 button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 8px;
-    background: #007BFF;
+    border-radius: 50px;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
     color: white;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
+/* Choices */
 .choice {
     background: #f1f1f1;
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s, transform 0.3s;
+}
+
+.choice:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .choice.correct {
     background: #28a745;
     color: white;
+    font-weight: 600;
 }
 
 .choice.wrong {
     background: #dc3545;
     color: white;
+    font-weight: 600;
+}
+
+/* Result Section */
+#result h2 {
+    color: #007BFF;
 }
 
 .hidden {
     display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .container {
+        padding: 30px 20px;
+    }
+    button {
+        width: 100%;
+    }
 }
