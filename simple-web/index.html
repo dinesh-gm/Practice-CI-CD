@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Simple CI/CD Web App</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Dashboard</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Welcome to DevOps CI/CD Demo</h2>
-    <button onclick="showMessage()">Click Me</button>
-    <p id="msg"></p>
-
-    <script src="script.js"></script>
+<div class="container">
+    <h1>Weather Dashboard</h1>
+    <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+    </div>
+    <div id="weather" class="hidden">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon" src="" alt="Weather Icon">
+        <p id="temp"></p>
+        <p id="humidity"></p>
+        <p id="desc"></p>
+    </div>
+    <p id="error" class="error"></p>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
